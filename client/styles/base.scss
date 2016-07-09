@@ -1,0 +1,42 @@
+$color-hilight: #FDFDFD;
+
+body {
+  background-color: #FFF;
+  padding: 1.1em;
+}
+
+.maincontent {
+
+  font-size: 3em;
+  font-weight: 200;
+
+  h1 {
+    margin-top: 0;
+    font-size: 1.1em;
+    font-weight: 200;
+
+    em {
+      font-weight: 600;
+      font-style: normal;
+    }
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.6em;
+  }
+
+  input {
+    border: 0;
+    font-weight: 500;
+
+    &::-webkit-input-placeholder {
+      color: #AAA;
+      font-weight: 300;
+    }
+  }
+
+  &__password {
+
+  }
+}
