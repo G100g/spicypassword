@@ -1,10 +1,26 @@
 import { SHA3 } from 'crypto-js';
+import base64 from 'base-64';
 
 function buildPassword(password, domain) {
-  return SHA3(password, domain).toString().substr(0, 10);
+
+  if (!password || !domain) return '';
+
+  let new_password = base64.encode(SHA3(password + domain).toString()).substr(0, 10);
+
+  // We need to have at least a number in my super password
+  // So we take charcode of first and last new_password character and after first,
+
+  let charCode = new_password.charCodeAt(Math.ceil(new_password.length / 2));
+
+  new_password += charCode;
+
+  // and one of this special chars ^!@# adding the end
+  new_password = '^' + new_password;
+
+  return new_password;
 }
 
-const password = (state = { result: '', password: '', domain: '' }, action) => {
+const password = (state = { result: '', password: '', domain: 'facebook.com' }, action) => {
 
   let saltedPassword = '';
 
