@@ -29,6 +29,11 @@ body {
   input {
     border: 0;
     font-weight: 500;
+    outline: none;
+    border: 1px solid #EEE;
+    padding: 0 .2em;
+    margin-left: -0.2em;
+    padding-bottom: 0.2em;
 
     &::-webkit-input-placeholder {
       color: #AAA;
