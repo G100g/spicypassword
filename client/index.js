@@ -4,11 +4,11 @@ import { render } from 'react-dom';
 // This wire store to root components tree
 import { Provider } from 'react-redux';
 
-import store from './client/store';
-import AppContainer from './client/components/AppContainer';
+import store from './store';
+import AppContainer from './components/AppContainer';
 
 import 'normalize.css';
-import './client/styles/base.scss';
+import './styles/base.scss';
 
 render(
   <Provider store={store}>

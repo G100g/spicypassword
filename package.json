@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.js",
     "build": "npm run clean && npm run build:webpack",
     "build:dev": "npm run clean && webpack",
     "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist/build",
     "start": "node devServer.js",
-    "fix": "eslint --fix *.js"
+    "fix": "eslint --fix *.js",
+    "gh-pages": "npm run build && git push origin `git subtree split --prefix dist master`:gh-pages --force"
   },
   "author": "",
   "license": "ISC",

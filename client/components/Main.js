@@ -24,7 +24,7 @@ const Main = ({ updatePassword, updateDomain, password }) => {
       <p>for my account on</p>
 
       <div className="maincontent__domain">
-        <input type="text" placeholder="facebook.com" onChange={handleDomainChange} />
+        <input type="text" placeholder="facebook.com" defaultValue={password.domain} onChange={handleDomainChange} />
       </div>
 
       <p>and this is the result</p>

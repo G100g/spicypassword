@@ -10,7 +10,9 @@ import rootReducer  from './reducers/';
 
 const defaultState = {
   password: {
-    result: 'nope'
+    password: '',
+    domain: 'facebook.com',
+    result: '',
   },
 };
 
