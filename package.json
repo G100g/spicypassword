@@ -11,7 +11,7 @@
     "clean": "rimraf dist/build",
     "start": "node devServer.js",
     "fix": "eslint --fix *.js",
-    "gh-pages": "npm run build && git push origin `git subtree split --prefix dist master`:gh-pages --force"
+    "deploy": "gulp deploy"
   },
   "author": "",
   "license": "ISC",
@@ -25,6 +25,7 @@
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-jsx-a11y": "^1.4.2",
     "eslint-plugin-react": "^5.1.1",
+    "gulp-gh-pages": "^0.5.4",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-hot-middleware": "^2.12.1"
