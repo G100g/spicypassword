@@ -8,7 +8,7 @@ import store from './store';
 import AppContainer from './components/AppContainer';
 
 import 'normalize.css';
-import './styles/base.scss';
+import './styles/base.css';
 
 render(
   <Provider store={store}>

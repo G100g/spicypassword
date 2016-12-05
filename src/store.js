@@ -13,6 +13,13 @@ const defaultState = {
     password: '',
     domain: 'facebook.com',
     result: '',
+    engines: {
+      version: 1,
+      availables: []
+    },
+    color: {
+      background: '#FFF'
+    }
   },
 };
 
