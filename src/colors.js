@@ -1,6 +1,13 @@
+function setColor(background, color = '#fff') {
+  return {
+    background,
+    color,
+  };
+}
+
 const colors = {
-  'twitter': '#1da1f2',
-  'facebook': '#3b5998'
+  'twitter': setColor('#1da1f2'),
+  'facebook': setColor('#3b5998')
 };
 
 const DomainColors = {

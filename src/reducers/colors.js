@@ -10,7 +10,7 @@ const colors = (state = { background: '#fff' }, action) => {
       let background = "";
 
       if (action.value) {
-        background = DomainColors.match(action.value) || '#fff';
+        background = DomainColors.match(action.value) || '';
       }
 
        return { ...state, background };

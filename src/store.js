@@ -17,9 +17,6 @@ const defaultState = {
       version: 1,
       availables: []
     },
-    color: {
-      background: '#FFF'
-    }
   },
 };
 

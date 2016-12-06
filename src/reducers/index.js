@@ -7,7 +7,7 @@ import colors from './colors';
 const spicyPasswordApp = combineReducers({
   password,
   engines,
-  colors,
+  // colors,
 });
 
 export default spicyPasswordApp;

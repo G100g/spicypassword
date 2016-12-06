@@ -1,5 +1,5 @@
 import React from 'react';
-//import FinalResult from './FinalResult';
+import Bookmarklet from './Bookmarklet';
 
 const Main = ({ updatePassword, updateDomain, selectEngine, password, engines, colors }) => {
 
@@ -16,38 +16,37 @@ const Main = ({ updatePassword, updateDomain, selectEngine, password, engines, c
     updatePassword(password.password);
   }
 
-  let status = {
-    backgroundColor: colors.background
-  };
+  let domainClass = 'maincontent maincontent--' + password.domain.replace('.', '-');
 
   return (
-    <div className="maincontent" style={ status }>
+    <div className={domainClass}>
       <h1>Welcome to <em>Spicy Password</em></h1>
 
-      <p>this is the</p>
+      <p>type your personal and unique</p>
 
       <div className="maincontent__password">
         <input type="password" placeholder="password" onChange={handlePasswordChange} />
       </div>
 
-      <p>for my account on</p>
+      <p>for your account on domain</p>
 
       <div className="maincontent__domain">
         <input type="text" placeholder="facebook.com" defaultValue={password.domain} onChange={handleDomainChange} />
       </div>
 
-      <p>and this is the result</p>
+      <p>and get the new spicy password</p>
 
       <div className="maincontent__result">
         <input type="text" value={password.result} readOnly />
       </div>
 
       <div className="maincontent__engine">
-        Engine
         <select onChange={handleSelectEngine}>
-          { engines.availables.map(engine => <option key={engine} value={engine}>{engine}</option>) }
+          { engines.availables.map(engine => <option key={engine} value={engine}>Engine v{engine}</option>) }
         </select>
       </div>
+
+      <Bookmarklet />
 
     </div>
   );

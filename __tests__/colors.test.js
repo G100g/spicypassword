@@ -5,7 +5,8 @@ describe('Brand Color', () => {
 
         let color = DomainColors.match('facebook.com');
 
-        expect(color).toBe('#3b5998');
+        expect(color.background).toBe('#3b5998');
+        expect(color.color).toBe('#fff');
 
     });
 

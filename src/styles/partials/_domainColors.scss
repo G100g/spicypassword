@@ -1,0 +1,17 @@
+$color-facebook: #3b5998;
+$color-twitter: #1da1f2;
+
+.maincontent {
+
+  transition: background 2.3s ease, color 2.3s ease;
+
+  &--facebook-com {
+    color: #fff;
+    background: $color-facebook;
+  }
+
+  &--twitter-com {
+    color: #fff;
+    background: $color-twitter;
+  }
+}

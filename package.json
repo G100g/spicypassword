@@ -28,5 +28,6 @@
     "react-redux": "^4.4.5",
     "redux": "^3.5.2"
   },
-  "private": true
+  "private": true,
+  "homepage": "https://g100g.github.io/spicypassword"
 }
