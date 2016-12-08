@@ -11,7 +11,7 @@ const Bookmarklet = (props) => {
 
   return (
     <div className="bookmarklet">
-      <p>Use this bookmarklet for quicly access from domain<br />
+      <p>Use this bookmarklet for quickly access from domain<br />
       <a href={bookmarklet}>Get Password</a>
       </p>
     </div>
