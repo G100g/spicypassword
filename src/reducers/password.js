@@ -6,6 +6,12 @@ const password = (state = { result: '', password: '', domain: '' }, action) => {
 
   switch (action.type) {
 
+    case '@@INIT':
+
+    if (window.location.hash) {
+      return { ...state, domain: window.location.hash.substr(1).replace(/www\./, '') };
+    }
+
     case 'UPDATE_PASSWORD':
 
       // Apply password transformation
