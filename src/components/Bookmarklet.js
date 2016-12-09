@@ -7,7 +7,7 @@ const Bookmarklet = (props) => {
   const bookmarklet = `javascript:(function (base_url) {
     var result = base_url + '#' + window.location.host;
     window.open(result);
-  })('${window.location.origin + '/' + process.env.PUBLIC_URL}')`;
+  })('${window.location.origin + process.env.PUBLIC_URL}')`;
 
   return (
     <div className="bookmarklet">
