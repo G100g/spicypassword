@@ -1,5 +1,5 @@
 import passwordEngine from '../src/spicerack';
-import engineV1 from '../src/spicerack/engine-v1';
+import engineV2, { addSymbol, symbols } from '../src/spicerack/engine-v2';
 
 describe('Password Engine', () => {
   it('return an object', () => {
@@ -40,4 +40,35 @@ describe('Password Engine', () => {
     //     expect(typeof engine).toBe('object');
     //     expect(type engine.build).toBe('function');
     // });
+});
+
+
+describe('Engine V2', () => {
+
+  function testSymbol(expected, lenght) {
+      it(`return ${expected} using ${lenght}`, () => {
+
+        let result = addSymbol(lenght);
+        expect(result).toBe(expected);
+
+      });
+  }
+
+  const total = 101;
+
+  // Step must be the number of symbols array
+  const steps = symbols.length;
+
+  for(let i = 0; i < total; i += steps) {
+    testSymbol('#', i);
+  }
+
+  for(let i = 1; i < total; i += steps) {
+    testSymbol('%', i);
+  }
+
+  for(let i = 2; i < total; i += steps) {
+    testSymbol('^', i);
+  }
+
 });

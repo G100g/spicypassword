@@ -1,6 +1,6 @@
 import { buildPassword } from '../spicerack';
 
-const engines = (state = { availables: buildPassword.getEngines(), version: 1 }, action) => {
+const engines = (state = { availables: buildPassword.getEngines(), version: 2 }, action) => {
 
   switch (action.type) {
 
