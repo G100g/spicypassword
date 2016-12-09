@@ -1,5 +1,5 @@
 import React from 'react';
-import conf from '../../package.json';
+// import conf from '../../package.json';
 import '../styles/Bookmarklet.css';
 
 const Bookmarklet = (props) => {
@@ -7,7 +7,7 @@ const Bookmarklet = (props) => {
   const bookmarklet = `javascript:(function (base_url) {
     var result = base_url + '#' + window.location.host;
     window.open(result);
-  })('${conf.homepage}')`;
+  })('${window.location.origin + '/' + process.env.PUBLIC_URL}')`;
 
   return (
     <div className="bookmarklet">
