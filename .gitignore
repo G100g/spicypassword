@@ -1,4 +1,4 @@
-dist/build
+build
 node_modules
 .tern-project
 src/styles/**/*.css
