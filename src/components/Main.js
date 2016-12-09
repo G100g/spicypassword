@@ -1,5 +1,6 @@
 import React from 'react';
 import Bookmarklet from './Bookmarklet';
+import { TwitterButton, FacebookLikeButton } from 'react-social-buttons';
 
 const Main = ({ updatePassword, updateDomain, selectEngine, password, engines, colors }) => {
 
@@ -16,7 +17,8 @@ const Main = ({ updatePassword, updateDomain, selectEngine, password, engines, c
     updatePassword(password.password);
   }
 
-  let domainClass = 'maincontent maincontent--' + password.domain.replace('.', '-');
+  let url = window.location.href;
+  let domainClass = 'maincontent maincontent--' + password.domain.replace(/\./ig, '-');
 
   return (
     <div className={domainClass}>
@@ -41,9 +43,14 @@ const Main = ({ updatePassword, updateDomain, selectEngine, password, engines, c
       </div>
 
       <div className="maincontent__engine">
-        <select onChange={handleSelectEngine}>
-          { engines.availables.map(engine => <option key={engine} value={engine}>Engine v{engine}</option>) }
+        <select onChange={handleSelectEngine} defaultValue={engines.version}>
+          { engines.availables.map(engine => <option key={engine} value={engine} >Engine v{engine}</option>) }
         </select>
+      </div>
+
+      <div className="maincontent__socials">
+        <TwitterButton url={url}/>
+        <FacebookLikeButton url={url}/>
       </div>
 
       <Bookmarklet />
