@@ -51,6 +51,18 @@ body {
     }
   }
 
+  &__socials {
+    position: absolute;
+    bottom: .4em;
+    left: 1.1em;
+
+    > div {
+      float: left;
+      line-height: 7px;
+      padding-right: 10px;
+    }
+  }
+
 }
 
 .maincontent__engine {
@@ -62,5 +74,7 @@ body {
     font-size: .3em;
   }
 }
+
+
 
 @import 'partials/domainColors';

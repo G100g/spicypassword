@@ -12,9 +12,9 @@ $color-spotify: #2ebd59;
 
   transition: background 1.3s ease, color 1.3s ease;
 
-  h1 {
-    transition: color .7s ease;
-  }
+  // h1 {
+  //   transition: color .7s ease;
+  // }
 
   &--airbnb-com {
     h1 {
@@ -49,7 +49,10 @@ $color-spotify: #2ebd59;
     background: $color-pinterest;
   }
 
-  &--google-com {
+  &--google-com,
+  &--www-google-com,
+  &--google-it,
+  &--www-google-it {
     color: #fff;
     background: $color-google;
   }
