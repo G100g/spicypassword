@@ -26,8 +26,12 @@
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
+    "react-social-buttons": "^1.0.8",
     "redux": "^3.5.2"
   },
   "private": true,
-  "homepage": "https://g100g.github.io/spicypassword"
+  "homepage": "https://g100g.github.io/spicypassword",
+  "eslintConfig": {
+    "extends": "react-app"
+  }
 }
