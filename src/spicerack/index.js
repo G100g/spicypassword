@@ -27,7 +27,7 @@ const passwordEngines = {
 
 };
 
-passwordEngines.setVersion(1);
+passwordEngines.setVersion(2);
 
 export default passwordEngines;
 
