@@ -33,7 +33,7 @@ const Main = ({ updatePassword, updateDomain, selectEngine, password, engines, c
       <p>for your account on domain</p>
 
       <div className="maincontent__domain">
-        <input type="text" placeholder="facebook.com" defaultValue={password.domain} onChange={handleDomainChange} />
+        <input type="text" placeholder="facebook.com" defaultValue={password.domain} onChange={handleDomainChange} autocapitalize="off" />
       </div>
 
       <p>and get the new spicy password</p>
