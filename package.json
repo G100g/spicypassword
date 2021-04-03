@@ -1,37 +1,16 @@
 {
   "name": "spicypassword",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "sass": "node-sass --recursive src -o src",
-    "sass:watch": "node-sass --watch --recursive src -o src & WATCH_SASS_PID=$!",
-    "start": "npm run sass && npm run sass:watch && react-scripts start",
-    "build": "npm run sass && react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "gh-pages": "^0.12.0",
-    "react-scripts": "0.7.0",
-    "node-sass": "^3.7.0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "base-64": "^0.1.0",
-    "crypto-js": "^3.1.6",
-    "normalize.css": "^4.2.0",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
-    "react-redux": "^4.4.5",
-    "react-social-buttons": "^1.0.8",
-    "redux": "^3.5.2"
-  },
-  "private": true,
-  "homepage": "https://g100g.github.io/spicypassword",
-  "eslintConfig": {
-    "extends": "react-app"
+    "crypto-js": "^4.0.0",
+    "next": "10.0.9",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   }
 }
