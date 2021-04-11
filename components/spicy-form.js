@@ -33,7 +33,9 @@ function SpicyForm() {
           placeholder="facebook.com"
           // defaultValue={password.domain}
           onChange={({ target }) => setService(target.value)}
-          autoCapitalize="off"
+          autocorrect="off"
+          autocapitalize="none"
+          autocomplete="off"
         />
       </fieldset>
       <fieldset>
