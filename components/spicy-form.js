@@ -1,5 +1,6 @@
 import { useState } from "react";
 import passwordEngines from "../core/spicy-rack";
+import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
 
 const useSpicyPassword = () => {
   const [masterpassword, setMasterpassword] = useState("");
@@ -12,6 +13,7 @@ const useSpicyPassword = () => {
 
 function SpicyForm() {
   const [setMasterpassword, setService, spicyPassword] = useSpicyPassword();
+  const [copied, copy] = useCopyToClipboard(spicyPassword);
 
   return (
     <form>
@@ -43,7 +45,9 @@ function SpicyForm() {
         <input id="result" type="text" value={spicyPassword} readOnly />
       </fieldset>
       <fieldset>
-        <button>Copy to clipboard</button>
+        <button type="button" onClick={copy}>
+          Copy to clipboard
+        </button>
       </fieldset>
     </form>
   );
