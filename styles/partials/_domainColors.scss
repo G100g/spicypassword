@@ -1,0 +1,63 @@
+$color-facebook: #3b5998;
+$color-twitter: #1da1f2;
+$color-google: #dd4b39;
+$color-pinterest: #bd081c;
+$color-github: #fafafa;
+$color-github-front: #333;
+$color-airbnb: #fd5c63;
+$color-airbnb-front: #484848;
+$color-spotify: #2ebd59;
+
+.maincontent {
+  transition: background 1.3s ease, color 1.3s ease;
+
+  // h1 {
+  //   transition: color .7s ease;
+  // }
+
+  &--airbnb-com {
+    h1 {
+      color: $color-airbnb;
+    }
+
+    color: $color-airbnb-front;
+    // background: $color-facebook;
+  }
+
+  &--spotify-com {
+    h1 {
+      color: #000;
+    }
+
+    color: #fff;
+    background: $color-spotify;
+  }
+
+  &--facebook-com {
+    color: #fff;
+    background: $color-facebook;
+  }
+
+  &--twitter-com {
+    color: #fff;
+    background: $color-twitter;
+  }
+
+  &--pinterest-com {
+    color: #fff;
+    background: $color-pinterest;
+  }
+
+  &--google-com,
+  &--www-google-com,
+  &--google-it,
+  &--www-google-it {
+    color: #fff;
+    background: $color-google;
+  }
+
+  &--github-com {
+    color: $color-github-front;
+    background: $color-github;
+  }
+}

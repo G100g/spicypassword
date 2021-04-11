@@ -15,20 +15,18 @@ function SpicyForm() {
 
   return (
     <form>
-      <fieldset>
-        <label htmlFor="masterpassword">Type master password</label>
+      <fieldset className="maincontent__password">
+        <label htmlFor="masterpassword">Master password</label>
         <input
           id="masterpassword"
           type="password"
-          placeholder="password"
+          placeholder="supersecretpassword"
           onChange={({ target }) => setMasterpassword(target.value)}
           autoComplete="current-password"
         />
       </fieldset>
       <fieldset>
-        <label htmlFor="service">
-          Type your service name (a domain usually)
-        </label>
+        <label htmlFor="service">Service name</label>
         <input
           id="service"
           type="text"
@@ -39,8 +37,10 @@ function SpicyForm() {
         />
       </fieldset>
       <fieldset>
-        <label htmlFor="result">Get your spicy password</label>
+        <label htmlFor="result">Your spicy password</label>
         <input id="result" type="text" value={spicyPassword} readOnly />
+      </fieldset>
+      <fieldset>
         <button>Copy to clipboard</button>
       </fieldset>
     </form>
