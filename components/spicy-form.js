@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { LayoutContext } from "../context/layout";
 import passwordEngines from "../core/spicy-rack";
 import { useCopyToClipboard } from "../hooks/useCopyToClipboard";
 
@@ -8,13 +9,20 @@ const useSpicyPassword = () => {
 
   const spicypassword = passwordEngines.build(masterpassword, service);
 
-  return [setMasterpassword, setService, spicypassword];
+  return [setMasterpassword, setService, service, spicypassword];
 };
 
 function SpicyForm() {
-  const [setMasterpassword, setService, spicyPassword] = useSpicyPassword();
+  const [
+    setMasterpassword,
+    setService,
+    service,
+    spicyPassword,
+  ] = useSpicyPassword();
   const [copied, copy] = useCopyToClipboard(spicyPassword);
+  const layout = useContext(LayoutContext);
 
+  layout.setColorByDomain(`maincontent--${service.replace(/\./gi, "-")}`);
   return (
     <form>
       <fieldset className="maincontent__password">
@@ -46,7 +54,7 @@ function SpicyForm() {
       </fieldset>
       <fieldset>
         <button type="button" onClick={copy}>
-          Copy to clipboard
+          {copied ? `✅ Copied` : `Copy`} to clipboard
         </button>
       </fieldset>
     </form>

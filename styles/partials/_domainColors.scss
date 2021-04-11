@@ -6,14 +6,14 @@ $color-github: #fafafa;
 $color-github-front: #333;
 $color-airbnb: #fd5c63;
 $color-airbnb-front: #484848;
-$color-spotify: #2ebd59;
+$color-spotify: #1db954;
 
 .maincontent {
-  transition: background 1.3s ease, color 1.3s ease;
+  transition: background 0.8s ease, color 1.3s ease;
 
-  // h1 {
-  //   transition: color .7s ease;
-  // }
+  h1 {
+    transition: color 0.7s ease;
+  }
 
   &--airbnb-com {
     h1 {
@@ -26,7 +26,11 @@ $color-spotify: #2ebd59;
 
   &--spotify-com {
     h1 {
-      color: #000;
+      color: #191414;
+    }
+
+    fieldset label {
+      color: darken($color-spotify, 20%);
     }
 
     color: #fff;
@@ -36,11 +40,19 @@ $color-spotify: #2ebd59;
   &--facebook-com {
     color: #fff;
     background: $color-facebook;
+
+    fieldset label {
+      color: lighten($color-facebook, 40%);
+    }
   }
 
   &--twitter-com {
     color: #fff;
     background: $color-twitter;
+
+    fieldset label {
+      color: lighten($color-twitter, 35%);
+    }
   }
 
   &--pinterest-com {
@@ -54,6 +66,10 @@ $color-spotify: #2ebd59;
   &--www-google-it {
     color: #fff;
     background: $color-google;
+
+    fieldset label {
+      color: darken($color-google, 25%);
+    }
   }
 
   &--github-com {

@@ -29,5 +29,13 @@ export const useCopyToClipboard = (text) => {
   }, [text]);
   useEffect(() => () => setCopied(false), [text]);
 
+  useEffect(() => {
+    if (copied) {
+      setTimeout(() => {
+        setCopied(false);
+      }, 3000);
+    }
+  }, [copied]);
+
   return [copied, copy];
 };
